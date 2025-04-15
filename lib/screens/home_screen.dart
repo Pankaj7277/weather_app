@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
         return Image.asset("assets/6.png");
       case > 800 && <= 804:
         return Image.asset("assets/7.png");
-      
+
       default:
         return Image.asset("assets/7.png");
     }
@@ -109,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
                           ),
-                         getWeatherIcon(state.weather.weatherConditionCode!),
+                          getWeatherIcon(state.weather.weatherConditionCode!),
                           Center(
                             child: Text(
                               "${state.weather.temperature!.celsius!.round().toString()}°C ",
