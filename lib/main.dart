@@ -41,6 +41,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//determine the position
 Future<Position> _determinePosition() async {
   bool serviceEnabled;
   LocationPermission permission;
@@ -58,11 +59,6 @@ Future<Position> _determinePosition() async {
   if (permission == LocationPermission.denied) {
     permission = await Geolocator.requestPermission();
     if (permission == LocationPermission.denied) {
-      // Permissions are denied, next time you could try
-      // requesting permissions again (this is also where
-      // Android's shouldShowRequestPermissionRationale
-      // returned true. According to Android guidelines
-      // your App should show an explanatory UI now.
       return Future.error('Location permissions are denied');
     }
   }
